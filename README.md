@@ -1,5 +1,7 @@
 # BookTraders
-This is my groups API from my BSc (Hons) IT - Software Engineering course in 2021
+This is my groups API from my BSc (Hons) IT - Software Engineering course in 2021 at Eduvos
+
+API Documentation:
 
 /Get_all_books
 Endpoint: This end point allows to get all the books from the API.
