@@ -12,8 +12,8 @@ import json, os
 
 connect(db="bms", host="localhost", port=27017)
 
-api_key = 'b569537be1c9603c342b584a8fd7caf9'
-api_secret = '6d24a930f6a08bcddb4c033a50d2685f'
+api_key = 'XXXXXX'
+api_secret = 'XXXXXX'
 mailjet = Client(auth=(api_key, api_secret), version='v3.1')
 
 app = FastAPI()
@@ -198,13 +198,13 @@ async def signup(newuser: newUser):
         'Messages': [
             {
                 "From": {
-                    "Email": "eashanramcharan376@gmail.com",
+                    "Email": "email@email.com",
                     "Name": "BookTraders"
                 },
                 "To": [
                     {
-                        # "Email": "eashanramcharan376@gmail.com",
-                        # "Name": "Eashan"
+                        # "Email": "email@email.com",
+                        # "Name": "John Doe"
                         "Email": newuser.email,
                         "Name": newuser.username
                     }
@@ -212,7 +212,7 @@ async def signup(newuser: newUser):
                 "Subject": "Greetings from BookTraders.",
                 "TextPart": "Welcome to BookTraders",
                 "HTMLPart": "<h3>Dear " + newuser.username + ", welcome to BookTraders!",
-                # "HTMLPart": "<h3>Dear Eashan, welcome to BookTraders!",
+                # "HTMLPart": "<h3>Dear John Doe, welcome to BookTraders!",
                 "CustomID": "AppGettingStartedTest"
             }
         ]
